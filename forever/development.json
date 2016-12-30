@@ -1,0 +1,11 @@
+// forever/development.json
+{
+	"uid": "kodebrew",
+	"append": true,
+	"watch": true,
+	"watchDirectory": "/apps/kodebrew",
+	"script": "www",
+	"debug": true,
+	"verbose": true,
+	"sourceDir": "/apps/kodebrew/bin"
+}

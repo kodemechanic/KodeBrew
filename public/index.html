@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/static/stylesheets/style.css">
+  <script src="/static/javascripts/eventSwitching.js"></script>
+</head>
+
+<body>
+
+<div class="row">
+	<div class="textbox">
+		Element1
+	</div>
+	<div class="percentage">
+		Power (1-100)
+		<input type="number" min="0" max="100" step="1" value="0" name="Ele1Percent" id="Ele1Percent">
+	</div>
+	<div class="onoffswitch">
+	    <input onclick="switchElement('Element1', 'Ele1Percent')" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="Element1">
+	    <label class="onoffswitch-label" for="Element1">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span> 
+	    </label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="textbox">
+		Element2
+	</div>
+	<div class="percentage">
+		Power (1-100)
+		<input type="number" min="0" max="100" step="1" value="0" name="Ele2Percent" id="Ele2Percent">
+	</div>
+
+	<div class="onoffswitch">
+	    <input  onclick="switchElement('Element2', 'Ele2Percent')" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="Element2">
+	    <label class="onoffswitch-label" for="Element2">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span> 
+	    </label>
+	</div>
+</div>
+
+<div class="row">
+	<div class="textbox">
+		Pump1
+	</div>
+	<div class="onoffswitch">
+	    <input  onclick="switchPump('Pump1')" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="Pump1">
+	    <label class="onoffswitch-label" for="Pump1">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span> 
+	    </label>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="textbox">
+		Pump2
+	</div>
+	<div class="onoffswitch">
+	    <input onclick="switchPump('Pump2')" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="Pump2">
+	    <label class="onoffswitch-label" for="Pump2">
+	        <span class="onoffswitch-inner"></span>
+	        <span class="onoffswitch-switch"></span> 
+	    </label>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="textbox">
+		Temp 1
+	</div>
+	<div class="temp-label" id="temp1" >
+	Unknown
+	</div>
+</div>
+<div class="row">
+	<div class="textbox">
+		Temp 2
+	</div>
+	<div class="temp-label" id="temp2">
+	Unknown
+	</div>
+</div>
+
+<button onclick="updateTemps()">Refresh</button>
+
+</body>
+</html>
